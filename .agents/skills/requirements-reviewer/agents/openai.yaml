@@ -1,0 +1,4 @@
+interface:
+  display_name: "Requirements Reviewer"
+  short_description: "Compare specifications with implementation behavior."
+  default_prompt: "Use $requirements-reviewer to review a feature specification against its implementation."

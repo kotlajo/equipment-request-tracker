@@ -17,7 +17,7 @@ As a manager, I need requests to be automatically classified as high, medium, or
 - A request with no matching keyword keeps its existing priority, if one is present; otherwise it has no assigned priority. It remains visible in the unfiltered list.
 - Managers can choose to show all requests or filter the list by priority. The filter can be turned off to restore the full list.
 - Managers can choose to sort all requests by priority. Priority sorting orders High, then Medium, then Low; requests with the same priority retain their received order. Requests without a priority appear after prioritized requests.
-- With no filter or priority sort selected, requests remain in received order, with the oldest received first.
+- With no filter or priority sort selected, requests remain in the app's existing received order (newest first).
 - Filtering and sorting affect only the displayed view. They do not delete, rewrite, or otherwise hide requests from the unfiltered view.
 - Filter and sort selections are temporary page state. They reset when the page is refreshed.
 - Priority classification and view controls work without a login, database, or external service.
@@ -38,8 +38,8 @@ As a manager, I need requests to be automatically classified as high, medium, or
 5. Given a keyword with different capitalization, when evaluated, then it matches the same way as the configured keyword.
 6. Given a keyword that appears only as part of a longer word, when evaluated, then it does not match.
 7. Given a request with no matching keyword, when evaluated, then its existing priority is retained; if it has no existing priority, it remains unprioritized and visible.
-8. Given the default view, when requests are displayed, then they appear in received order.
-9. Given the priority sort, when requests are displayed, then High requests appear before Medium, Medium before Low, and unprioritized requests last; order within each priority group remains received order.
+8. Given the default view, when requests are displayed, then they appear in the app's existing received order (newest first).
+9. Given the priority sort, when requests are displayed, then High requests appear before Medium, Medium before Low, and unprioritized requests last; order within each priority group remains in received order.
 10. Given a selected priority filter, when the filter is applied, then only requests with that priority are displayed.
 11. Given an active priority filter, when the manager turns the filter off, then all requests are displayed again.
 12. Given any filter or sort selection, when the page is refreshed, then the view returns to the default unfiltered received order.

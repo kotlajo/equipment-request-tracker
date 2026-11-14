@@ -94,9 +94,33 @@
           <p id="request-count" class="request-count">0 requests</p>
         </div>
 
+        <div id="request-controls" class="request-controls" hidden>
+          <div class="field">
+            <label for="priority-filter">Filter by priority</label>
+            <select id="priority-filter" name="priorityFilter">
+              <option value="all">All priorities</option>
+              <option value="High">High priority</option>
+              <option value="Medium">Medium priority</option>
+              <option value="Low">Low priority</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="priority-sort">Sort requests</label>
+            <select id="priority-sort" name="prioritySort">
+              <option value="received">Received order (newest first)</option>
+              <option value="priority">Priority (High to Low)</option>
+            </select>
+          </div>
+        </div>
+
         <div id="empty-state" class="empty-state">
           <h3>No requests yet</h3>
           <p>Add the first equipment request using the form.</p>
+        </div>
+
+        <div id="filtered-empty-state" class="empty-state" hidden>
+          <h3>No matching requests</h3>
+          <p>Choose another priority or select all priorities to see every request.</p>
         </div>
 
         <div id="request-table-wrapper" class="table-wrapper" hidden>
@@ -107,6 +131,7 @@
                 <th scope="col">Requester</th>
                 <th scope="col">Department</th>
                 <th scope="col">Equipment</th>
+                <th scope="col">Priority</th>
                 <th scope="col">Needed by</th>
                 <th scope="col">Business reason</th>
                 <th scope="col">Submitted</th>

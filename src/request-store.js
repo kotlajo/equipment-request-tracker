@@ -37,7 +37,7 @@ export function validateRequest(input = {}) {
 
 function createId() {
   if (globalThis.crypto?.randomUUID) return globalThis.crypto.randomUUID();
-  return "request-" + Date.now() + "-" + Math.random().toString(16).slice(2);
+  return `request-${Date.now()}-${Math.random().toString(16).slice(2)}`;
 }
 
 export function createRequest(input, options = {}) {
